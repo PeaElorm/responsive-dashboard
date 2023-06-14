@@ -37,3 +37,25 @@ Orders.forEach(order => {
     tr.innerHTML = trContent;
     document.querySelector("table tbody").appendChild(tr);
 })
+
+//Greet User
+const currentTime = new Date();
+const currentHour = currentTime.getHours();
+
+let greeting;
+if (currentHour < 12) {
+    greeting = " morning";
+} else if (currentHour < 18) {
+    greeting = " afternoon"
+} else if (currentHour < 22) {
+    greeting = " evening"
+} else {
+    greeting = "night"
+}
+// currentHour < 12 ? "Good morning," : currentHour < 18 ? "Good evening," : console.log("Good night,");
+
+const timeOfDayElement = document.getElementById("timeOfDay");
+timeOfDayElement.textContent = greeting;
+
+const usernameElement = document.getElementById("username");
+usernameElement.textContent = "Valerie";
